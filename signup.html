@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./spinner.css" />
+    <link rel="stylesheet" href="./notification.css" />
+    <link rel="stylesheet" href="./signup.css" />
+    <link rel="stylesheet" href="./global.css" />
+    <title>Javapop - Signup</title>
+</head>
+<body>
+    <div class="header">
+        <img class="logotipo" src="./images/Javapop.png">
+        <h1>Javapop - Signup</h1>
+        <div>
+            <img class="signup" src="./images/back.png">
+            <button id="backButtonSignUp" class="backButton">BACK</button>
+        </div>
+    </div>
+    <main>
+        <section class="signup">
+            <form action="" id="signupForm">
+                <div class="notification">
+                </div>
+                <div id="mensajeAlerta">
+                </div>
+                <div>
+                    <label for="userInput">Username</label>
+                    <input type="text" name="userInput" id="userInput" placeholder="nombre" required/>
+                </div>
+
+                <div>
+                    <label for="passInput">Password</label>
+                    <input type="password" name="passInput" id="passInput" placeholder="password"  maxlength="8" required/>
+                </div>
+
+                <div>
+                    <label name="passConfirmInput">Confirm password</label>
+                    <input type="password" name="passConfirmInput" id="passConfirmInput" placeholder="confirm pass"  maxlength="8" required/>
+                </div>
+
+                <button id="crearUserButton" disabled>CREATE USER</button>
+                
+            </form>
+            <form action="" id="logginForm">
+                <div>
+                    <label for="userInputLoggin">Username</label>
+                    <input type="text" name="userInputLoggin" id="userInputLoggin" placeholder="nombre" required/>
+                </div>
+
+                <div>
+                    <label for="passInputLoggin">Password</label> 
+                    <input type="password" name="passInputLoggin" id="passInputLoggin" placeholder="password"  maxlength="8"  required/>
+                </div>
+
+                <button id="logginUserButton" enabled>LOGGIN</button>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="signup.js"></script>
+</body>
+</html>

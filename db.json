@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "username": "JoseMiguelGomez",
+      "password": "$2b$10$b8jGOWvcXuUhAfXvzykn5e45wy1lC11JyOHL0iAeUO7j/rkp7cn9C",
+      "id": 1
+    },
+    {
+      "username": "MiguelJoseFdez",
+      "password": "$2b$10$Fo9c0pMSXT1NHsc8WmIQWeTsKjvhZIlMT80joB4bDh64sQPG4e1l2",
+      "id": 2
+    }
+  ],
+  "anuncios": [
+    {
+      "nombre": "Motocicleta Ducati 100cv",
+      "descripcion": "Motocicleta con muchos caballos de potencia. Gasta muy poco: 6litros Además tiene la itv recién pasada",
+      "imagen": "http://localhost:8000//file-1649847162648.jpg",
+      "precio": "1234$",
+      "tipo": "VENTA",
+      "userId": 2,
+      "updatedAt": "2022-04-13T10:52:42.671Z",
+      "id": 1
+    },
+    {
+      "nombre": "Lenovo Thinkpad 34",
+      "descripcion": "Necesito comprar un portatil lenovo porque estoy jodido y soy un programador genial que hace juegos y apps.",
+      "imagen": "./images/Javapop.png",
+      "precio": "123£",
+      "tipo": "COMPRA",
+      "userId": 2,
+      "updatedAt": "2022-04-13T10:53:09.093Z",
+      "id": 2
+    },
+    {
+      "nombre": "Bmw blanco 320d",
+      "descripcion": "un 320d poco que decir un auténtico pepino con unas prestaciones que flipas. Me encanta porque va rapido.",
+      "imagen": "http://localhost:8000//file-1649847262104.jpg",
+      "precio": "123123€",
+      "tipo": "VENTA",
+      "userId": 1,
+      "updatedAt": "2022-04-13T10:54:22.122Z",
+      "id": 3
+    }
+  ]
+}

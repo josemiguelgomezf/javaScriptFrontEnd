@@ -1,0 +1,10 @@
+html {
+    background-color: rgb(174, 214, 241);
+    width: 65%;
+    margin: 0 auto;
+    background-image: url("./images/fondo.png");
+  }
+
+  body{
+    background-color: rgb(120, 188, 233);
+}

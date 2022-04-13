@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(120, 188, 233);
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+
+body h1{
+    font-family: 'Outfit', sans-serif;
+    width: 100%;
+}
+
+.logotipo {
+    height: 100px;
+}
+
+.signup {
+    height: 60px;
+}
+
+.signupButton {
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 60px;
+    height: 20px;
+}
+
+.backButton {
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 60px;
+    height: 20px;
+}
+
+#nombreDetalleProducto {
+    font-size: 25px;
+}
+
+p{
+    font-family: 'Outfit', sans-serif;
+    text-align: left;
+}
+
+
+#mensajeAlerta{
+    width: 100%;
+}
+
+#imgDetalleProducto {
+    height:400px;
+}
