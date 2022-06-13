@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const exitButton = null;
     const addButton = null;
     const addButtonCinema = null;
-    const postsListControllerButtons = new ControlerButtons(addButtonCinema, addButton, signupButton, exitButton, notificationController);
+    const addButtonTicket = null;
+    const postsListControllerButtons = new ControlerButtons(addButtonCinema, addButton, addButtonTicket, signupButton, exitButton, notificationController);
     postsListControllerButtons.backButton();
 });

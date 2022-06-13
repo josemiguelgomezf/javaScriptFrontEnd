@@ -24,7 +24,7 @@ export default {
     })
     },
     GetRooms (){
-        const url = "http://localhost:8000/api/room";
+    const url = "http://localhost:8000/api/room";
     return new Promise(function(resolve, reject){
         fetch(url)
         .catch((error)=>{
@@ -41,7 +41,7 @@ export default {
             reject("No se puede transformar a .json")
         })
         .then((posts) => {
-            console.log(posts);
+        
             resolve(posts);
         });
     

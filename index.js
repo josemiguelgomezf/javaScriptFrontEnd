@@ -12,9 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const exitButton = document.querySelector(".exitButton");
     const addButton = document.querySelector(".addButton");
     const addButtonRoom = document.querySelector(".addButtonCinema");
-    const postsListControllerButtons = new ControlerButtons(addButtonRoom, addButton, signupButton, exitButton, notificationController);
+    const addButtonTicket = document.querySelector(".ticketButton");
+    const postsListControllerButtons = new ControlerButtons(addButtonRoom, addButton,addButtonTicket, signupButton, exitButton, notificationController);
     postsListController.showPosts();
     postsListControllerButtons.signupButton();
+    postsListControllerButtons.addButtonTicket();
     postsListControllerButtons.exitButton();
     postsListControllerButtons.addButton();
     postsListControllerButtons.addButtonCinema();

@@ -1,8 +1,9 @@
 export default class ControlerButtons {
     postsList=null;
-    constructor(addButtonElementRoom, addButtonElement, signupButtonElement, exitButtonElement, notificationController) {
+    constructor(addButtonElementRoom, addButtonElement,addButtonTicket, signupButtonElement, exitButtonElement, notificationController) {
         this.addButtonElementRoom = addButtonElementRoom;
         this.addButtonElement = addButtonElement;
+        this.addButtonElementTicket = addButtonTicket;
         this.signupButtonElement = signupButtonElement;
         this.exitButtonElement = exitButtonElement;
         this.notificationController = notificationController;
@@ -30,6 +31,21 @@ export default class ControlerButtons {
         }
     }
 
+    addButtonTicket() {
+        var token = localStorage.getItem('token');
+        if (token) {
+            this.addButtonElementTicket.addEventListener('click', function (event) {
+                event.preventDefault();
+                window.location.assign("./addTicket.html");
+            });
+        }
+        else {
+            this.notificationController.show("You are not logged! You can not upload!", "info");
+            this.addButtonElementTicket.style.display = 'none';
+            document.querySelector(".ticket").style.display = 'none';
+            
+        }
+    }
     
 
     addButtonCinema() {
