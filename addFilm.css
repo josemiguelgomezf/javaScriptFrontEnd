@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+article{
+    width: 33%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+
+body h1{
+    font-family: 'Outfit', sans-serif;
+    width: 100%;
+}
+
+.logotipo {
+    height: 100px;
+}
+
+.signup {
+    height: 60px;
+}
+
+.backButton {
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 60px;
+    height: 20px;
+}
+
+.exit {
+    height: 60px;
+}
+
+.exitButton {
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 60px;
+    height: 20px;
+}
+
+label{
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+#createFilmButton {
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    padding: 0.5rem;
+}
+
+form div{
+    padding: 0.5rem;
+    width: 100%;
+}
+
+#mensajeAlerta{
+    width: 100%;
+}
+

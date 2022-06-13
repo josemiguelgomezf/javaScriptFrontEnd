@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const signupButton = document.querySelector("#backButtonSignUp");
     const exitButton = null;
     const addButton = null;
-    const postsListControllerButtons = new ControlerButtons(addButton, signupButton, exitButton, notificationController);
+    const addButtonCinema = null;
+    const postsListControllerButtons = new ControlerButtons(addButtonCinema, addButton, signupButton, exitButton, notificationController);
     postsListControllerButtons.backButton();
 });

@@ -1,6 +1,7 @@
 export default class ControlerButtons {
     postsList=null;
-    constructor(addButtonElement, signupButtonElement, exitButtonElement, notificationController) {
+    constructor(addButtonElementRoom, addButtonElement, signupButtonElement, exitButtonElement, notificationController) {
+        this.addButtonElementRoom = addButtonElementRoom;
         this.addButtonElement = addButtonElement;
         this.signupButtonElement = signupButtonElement;
         this.exitButtonElement = exitButtonElement;
@@ -17,7 +18,7 @@ export default class ControlerButtons {
             const tokenDecodificado = parseJwt(token);
             console.log(tokenDecodificado)
             const nombreUsuario = tokenDecodificado.username;
-            this.signupButtonElement.innerText = 'HELLO!';
+            this.signupButtonElement.innerText = nombreUsuario.substr(0,3).toUpperCase();
             this.notificationController.show("Welcome again " + nombreUsuario+ "!", "check");
         }
         else{
@@ -29,18 +30,36 @@ export default class ControlerButtons {
         }
     }
 
+    
+
+    addButtonCinema() {
+        var token = localStorage.getItem('token');
+        if (token) {
+            this.addButtonElementRoom.addEventListener('click', function (event) {
+                event.preventDefault();
+                window.location.assign("./addRoom.html");
+            });
+        }
+        else {
+            this.notificationController.show("You are not logged! You can not upload!", "info");
+            this.addButtonElementRoom.style.display = 'none';
+            document.querySelector(".add").style.display = 'none';
+            
+        }
+    }
+
     addButton() {
         var token = localStorage.getItem('token');
         if (token) {
             this.addButtonElement.addEventListener('click', function (event) {
                 event.preventDefault();
-                window.location.assign("./addProduct.html");
+                window.location.assign("./addFilm.html");
             });
         }
         else {
             this.notificationController.show("You are not logged! You can not upload!", "info");
             this.addButtonElement.style.display = 'none';
-            document.querySelector(".add").style.display = 'none';
+            document.querySelector("#addFilmImg").style.display = 'none';
             
         }
     }

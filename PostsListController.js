@@ -36,13 +36,13 @@ export default class Controler {
                 else {
                     buttonDelete.style.display = 'none';
                 }
-                const idProducto = postElement.querySelector(".idprod").textContent;
+                const idFilm = postElement.querySelector(".idprod").textContent;
                 try {
                     buttonDelete.addEventListener('click', async event => {
                         event.preventDefault();
                         if (window.confirm("Do you really want to delete?")) {
                             try {
-                                await PostsService.deleteProduct(idProducto);
+                                await PostsService.deleteFilm(idFilm);
                                 window.location.assign("./");
                             }
                             catch (error) {
@@ -61,16 +61,22 @@ export default class Controler {
                     buttonDetalle.addEventListener('click', async event => {
                         event.preventDefault();
                         try {
-                            const nombre = postElement.querySelector("h2").textContent;
-                            localStorage.setItem('nombre', nombre);
-                            const description = postElement.querySelector("h3").textContent;
-                            localStorage.setItem('description', description);
+                            const name = postElement.querySelector("h2").textContent;
+                            localStorage.setItem('name', name);
+                            const sinopsis = postElement.querySelector("h3").textContent;
+                            localStorage.setItem('sinopsis', sinopsis);
                             const imgPath = postElement.querySelector("img").src;
                             localStorage.setItem('imgPath', imgPath);
-                            const precio = postElement.querySelector(".precio").textContent;
-                            localStorage.setItem('precio', precio);
-                            const tipo = postElement.querySelector(".tipo").textContent;
-                            localStorage.setItem('tipo', tipo);
+                            const webOficial = postElement.querySelector("h4").textContent;
+                            localStorage.setItem('webOficial', webOficial);
+                            const originalTitle = postElement.querySelector(".originalTitle").textContent;
+                            localStorage.setItem('originalTitle', originalTitle);
+                            const movieGenre = postElement.querySelector(".movieGenre").textContent;
+                            localStorage.setItem('movieGenre', movieGenre);
+                            const ageRaiting = postElement.querySelector(".ageRaiting").textContent;
+                            localStorage.setItem('ageRaiting', ageRaiting);
+                            const duration = postElement.querySelector(".duration").textContent;
+                            localStorage.setItem('duration', duration);
                             const posted = postElement.querySelector(".posted").textContent;
                             localStorage.setItem('posted', posted);
                                 window.location.assign("./detalle.html");
