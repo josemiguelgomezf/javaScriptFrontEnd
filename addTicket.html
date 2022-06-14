@@ -62,14 +62,23 @@
                 <button onclick="myFunction()" id="seeTicketButton">SEE ALL TICKETS</button>
                 <script>
                     function myFunction() {
-                        const allTicketsList = document.getElementById("allTickets");
-                        allTicketsList.setAttribute("display", "block");
+                        var x = document.getElementById("allTickets");
+                        if (x.style.display === "none") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
                     }
                 </script>
         </section>
         <section id="allTickets">
             
         </section>
+        <div>
+            <label for="ticketDelete">Ticket id to delete:</label>
+            <input type="text" name="ticketDelete" id="ticketDelete" placeholder="idTicket" required />
+        </div>
+        <button id="deleteTicketButton">DELETE</button>
     </main>
     <script type="module" src="addTicket.js"></script>
 </body>

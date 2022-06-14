@@ -2,12 +2,13 @@ class AddTicketService {
     constructor() {
     }
 
-    async createTicket(room, row, column, date, hour) {
+    async createTicket(room, row, column, film, date, hour) {
         const data =
         {
             "room": room,
             "row": row,
             "column": column,
+            "film": film,
             "date": date,
             "hour": hour,
         };

@@ -41,7 +41,26 @@
 
                 <button id="createRoomButton">CREATE ROOM</button>
             </form>
-        </section>
+            <button onclick="myFunction()" id="seeRoomButton">SEE ALL ROOMS</button>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("allRooms");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
+            </script>
+    </section>
+    <section id="allRooms">
+        
+    </section>
+    <div>
+        <label for="roomDelete">Room id to delete:</label>
+        <input type="text" name="roomDelete" id="roomDelete" placeholder="idRoom" required />
+    </div>
+    <button id="deleteRoomButton">DELETE</button>
     </main>
     <script type="module" src="addRoom.js"></script>
 </body>

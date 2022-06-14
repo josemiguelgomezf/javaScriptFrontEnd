@@ -84,5 +84,33 @@ export default {
         if (!response.ok) {
             throw new Error(datos.message);
         }
+    },
+    async deleteTicket(idFilm) {
+        const response = await fetch("http://localhost:8000/api/ticket/" + idFilm, {
+            method: 'DELETE', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+        });
+
+        const datos = await response.json();
+        if (!response.ok) {
+            throw new Error(datos.message);
+        }
+    },
+    async deleteRoom(idFilm) {
+        const response = await fetch("http://localhost:8000/api/room/" + idFilm, {
+            method: 'DELETE', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+        });
+
+        const datos = await response.json();
+        if (!response.ok) {
+            throw new Error(datos.message);
+        }
     }
 }  

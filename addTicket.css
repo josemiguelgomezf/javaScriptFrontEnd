@@ -66,6 +66,14 @@ input {
     padding: 0.5rem;
 }
 
+#seeTicketButton{
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    padding: 0.5rem;
+}
+
 form div{
     padding: 0.5rem;
     width: 100%;
@@ -73,8 +81,4 @@ form div{
 
 #mensajeAlerta{
     width: 100%;
-}
-
-#allTickets{
-    display: none;
 }

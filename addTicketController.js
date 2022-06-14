@@ -19,13 +19,15 @@ export default class addTicketController {
 
             const column = this.addForm.querySelector("#columns").value;
 
+            const film = this.addForm.querySelector("#films").value
+
             const date = this.addForm.querySelector("#dateInput").value;
 
             const hour = this.addForm.querySelector("#hourInput").value;
 
             
             try {
-                await addTicketService.createTicket(room, row, column, date, hour);
+                await addTicketService.createTicket(room, row, column, film, date, hour);
                 window.location.assign("./");
             }
             catch (error) {

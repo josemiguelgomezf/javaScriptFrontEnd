@@ -17,7 +17,6 @@ export function crearVista(posts) {
     <p class="posted">${posts.updatedAt}</p>
     <button id="${posts.id}" class="deleteButton">Eliminar</button>
     <button id="${posts.id}" class="detalleButton">Detalle</button>
-    <button id="${posts.id}" class="reservaButton">Reservar</button>
     </div>
     `;
     return postTemplate;

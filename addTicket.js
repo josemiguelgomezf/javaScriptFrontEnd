@@ -3,6 +3,25 @@ import NotificationController from "./NotificationController.js";
 import ControlerButtons from "./PostListButtonsController.js";
 import PostsService from "./PostsService.js";
 
+const buttonDelete = document.querySelector("#deleteTicketButton");
+
+buttonDelete.addEventListener('click', async event => {
+    event.preventDefault();
+    const idTicket = document.querySelector("#ticketDelete").value;
+    if (window.confirm("Do you really want to delete?")) {
+        try {
+            await PostsService.deleteTicket(idTicket);
+            window.location.assign("./");
+        }
+        catch (error) {
+            const notificationElement = document.querySelector(".notification");
+            const notificationController = new NotificationController(notificationElement);
+            notificationController.show(error);
+        }
+    }
+    
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const formAdd = document.querySelector("#addForm");
     console.log(formAdd);
@@ -17,14 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const tickets = await PostsService.GetTickets();
 const rooms = await PostsService.GetRooms();
-const ticketsList = document.querySelector("#allTickets");
 const roomsList = document.querySelector("#rooms");
 const rowsMax = document.querySelector("#rows");
 const columnsMax = document.querySelector("#columns");
 
+const ticketsList = document.querySelector("#allTickets");
 for (var i=0; i<tickets.length; i++){
     const ticket = tickets[i];
-    ticketsList.innerHTML += "<p>"+ticket.id+"</p>" ;
+    console.log(ticket);
+    ticketsList.innerHTML += "<div><p>"+ticket.id+"</p><p>"+ticket.room+"</p><p>"+ticket.film+"</p></div>";
 }
 
 for (var i=0; i<rooms.length; i++){
