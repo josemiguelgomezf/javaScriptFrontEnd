@@ -8,6 +8,17 @@
     flex-wrap: wrap;
 }
 
+.buttonMenu{
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+}
+
+.buttonMenu button{
+    margin-left: 5px;
+}
+
 .post{
     display: flex;
     flex-direction: row;
@@ -59,28 +70,28 @@ body h1{
 .signupButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 100%;
+    width: 90%;
     height: 20px;
 }
 
 .ticketButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 100%;
+    width: 90%;
     height: 20px;
 }
 
 .addButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 100%;
+    width: 90%;
     height: 20px;
 }
 
 .addButtonCinema{
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 100%;
+    width: 90%;
     height: 20px;
 }
 
@@ -91,7 +102,7 @@ body h1{
 .exitButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 100%;
+    width: 90%;
     height: 20px;
 }
 

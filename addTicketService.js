@@ -2,12 +2,14 @@ class AddTicketService {
     constructor() {
     }
 
-    async createTicket(name, rows, columns) {
+    async createTicket(room, row, column, date, hour) {
         const data =
         {
-            "name": name,
-            "rows": rows,
-            "columns": columns,
+            "room": room,
+            "row": row,
+            "column": column,
+            "date": date,
+            "hour": hour,
         };
         
         const response = await fetch("http://localhost:8000/api/ticket", {

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const signupButton = document.querySelector("#backAddDetalle");
     const exitButton = null;
     const addButton = null;
-    const postsListControllerButtons = new ControlerButtons(addButton, signupButton, exitButton, notificationController);
+    const postsListControllerButtons = new ControlerButtons(null, null, null, signupButton, null, null);
     postsListControllerButtons.backButton();
 
     const name = document.querySelector("#nameDetalleFilm");

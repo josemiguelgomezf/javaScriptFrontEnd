@@ -23,6 +23,30 @@ export default {
     
     })
     },
+    GetTickets(){
+        const url = "http://localhost:8000/api/ticket";
+    return new Promise(function(resolve, reject){
+        fetch(url)
+        .catch((error)=>{
+            console.log(error);
+            reject("La url es incorrecta.")
+            throw new Error(error);
+        })
+        .then((responseHttp) => {
+            console.log(responseHttp);
+            return responseHttp.json();
+        })
+        .catch((error)=>{
+            console.log(error);
+            reject("No se puede transformar a .json")
+        })
+        .then((posts) => {
+            console.log(posts);
+            resolve(posts);
+        });
+    
+    })
+    },
     GetRooms (){
     const url = "http://localhost:8000/api/room";
     return new Promise(function(resolve, reject){

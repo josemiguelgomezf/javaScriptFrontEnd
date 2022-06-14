@@ -58,7 +58,7 @@ input {
     font-family: 'Roboto', sans-serif;
     width: 100%;
 }
-#createRoomButton {
+#createTicketButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
     width: 150px;
@@ -75,3 +75,6 @@ form div{
     width: 100%;
 }
 
+#allTickets{
+    display: none;
+}

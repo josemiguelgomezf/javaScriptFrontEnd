@@ -13,15 +13,19 @@ export default class addTicketController {
         this.addForm.addEventListener("submit", async (event)=>{
             event.preventDefault();
 
-            const name = this.addForm.querySelector("#nameInput").value;
+            const room = this.addForm.querySelector("#rooms").value;
 
-            const rows = this.addForm.querySelector("#rowsInput").value;
+            const row = this.addForm.querySelector("#rows").value;
 
-            const columns = this.addForm.querySelector("#columnsInput").value;
+            const column = this.addForm.querySelector("#columns").value;
+
+            const date = this.addForm.querySelector("#dateInput").value;
+
+            const hour = this.addForm.querySelector("#hourInput").value;
 
             
             try {
-                await addTicketService.createTicket(name, rows, columns);
+                await addTicketService.createTicket(room, row, column, date, hour);
                 window.location.assign("./");
             }
             catch (error) {
