@@ -1,5 +1,6 @@
 import NotificationController from "./NotificationController.js";
 import ControlerButtons from "./PostListButtonsController.js";
+import PostsService from "./PostsService.js";
 
 
 
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const originalTitle = document.querySelector("#originalTitleDetalleFilm");
     const movieGenre = document.querySelector("#movieGenreDetalleFilm");
     const ageRaiting = document.querySelector("#ageRaitingDetalleFilm");
-    const duration = document.querySelector("#durationGenreDetalleFilm");
+    const duration = document.querySelector("#durationDetalleFilm");
 
     name.innerText = localStorage.getItem('name');
     sinopsis.innerText = localStorage.getItem('sinopsis');
@@ -30,3 +31,33 @@ document.addEventListener("DOMContentLoaded", () => {
     ageRaiting.innerText = localStorage.getItem('ageRaiting');
     duration.innerText = localStorage.getItem('duration');
 });
+
+const buttonComentar = document.querySelector("#publicarComentario");
+
+buttonComentar.addEventListener('click', async event => {
+    event.preventDefault();
+    const comentario = document.querySelector("#comentario").value;
+    const pelicula = localStorage.getItem('name');
+    if (window.confirm("Do you really want to comment?")) {
+        try {
+            await PostsService.createComment(comentario, pelicula);
+            window.location.assign("./");
+        }
+        catch (error) {
+            const notificationElement = document.querySelector(".notification");
+            const notificationController = new NotificationController(notificationElement);
+            notificationController.show(error);
+        }
+    }
+    
+});
+
+const comentarios = await PostsService.GetComments();
+const commentsList = document.querySelector("#comentariosList");
+
+for (var i=0; i<comentarios.length; i++){
+    const comment = comentarios[i];
+    if (comment.pelicula==localStorage.getItem('name')){
+        commentsList.innerHTML += "<div class=containerComment><p>"+comment.comentario+"</p><p>By:"+comment.userId+"</p><p>At:"+comment.updatedAt+"</p></div>";
+    }
+}

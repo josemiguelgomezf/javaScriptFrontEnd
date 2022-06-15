@@ -53,12 +53,22 @@
                 </div>
 
                 <div>
-                    <label for="hourInput">Rows</label>
+                    <label for="hourInput">Hour</label>
                     <input type="text" name="hourInput" id="hourInput" placeholder="hour" required />
                 </div>
 
                 <button id="createTicketButton">CREATE TICKET</button>
             </form>
+            <div class="deleteDiv">
+                <label for="ticketEdit">Ticket id to edit:</label>
+                <input type="text" name="ticketEdit" id="ticketEdit" placeholder="idTicket" required />
+            </div>
+            <button id="editTicketButton">EDIT</button> </br>
+            <div class="deleteDiv">
+                <label for="ticketDelete">Ticket id to delete:</label>
+                <input type="text" name="ticketDelete" id="ticketDelete" placeholder="idTicket" required />
+            </div>
+            <button id="deleteTicketButton">DELETE</button> </br>
                 <button onclick="myFunction()" id="seeTicketButton">SEE ALL TICKETS</button>
                 <script>
                     function myFunction() {
@@ -74,11 +84,6 @@
         <section id="allTickets">
             
         </section>
-        <div>
-            <label for="ticketDelete">Ticket id to delete:</label>
-            <input type="text" name="ticketDelete" id="ticketDelete" placeholder="idTicket" required />
-        </div>
-        <button id="deleteTicketButton">DELETE</button>
     </main>
     <script type="module" src="addTicket.js"></script>
 </body>

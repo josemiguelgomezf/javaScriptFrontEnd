@@ -43,5 +43,28 @@ const rooms = await PostsService.GetRooms();
 const roomsList = document.querySelector("#allRooms");
 for (var i=0; i<rooms.length; i++){
     const room = rooms[i];
-    roomsList.innerHTML += "<div><p>"+room.id+"</p><p>"+room.rows+"</p><p>"+room.columns+"</p></div>";
+    roomsList.innerHTML += "<div class=container><p>Id:"+room.id+"</p><p>Name:"+room.name+"</p><p>Rows:"+room.rows+"</p><p>Columns:"+room.columns+"</p></div>";
 }
+
+const buttonEdit = document.querySelector("#editRoomButton");
+
+buttonEdit.addEventListener('click', async event => {
+    event.preventDefault();
+    const id = document.querySelector("#roomEdit").value;
+    const name = document.querySelector("#nameInput").value;
+    const rows = document.querySelector("#rowsInput").value;
+    const columns = document.querySelector("#columnsInput").value;
+    
+    if (window.confirm("Do you really want to edit?")) {
+        try {
+            await PostsService.editRoom(id, name, rows, columns);
+            window.location.assign("./");
+        }
+        catch (error) {
+            const notificationElement = document.querySelector(".notification");
+            const notificationController = new NotificationController(notificationElement);
+            notificationController.show(error);
+        }
+    }
+    
+});

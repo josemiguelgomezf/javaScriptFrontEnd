@@ -75,3 +75,18 @@ form div{
     width: 100%;
 }
 
+.editeDiv {
+    padding-left: 8px;
+}
+
+.editeDiv input{
+    width: 99.4%;
+}
+
+#editFilmButton {
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    padding: 0.5rem;
+}

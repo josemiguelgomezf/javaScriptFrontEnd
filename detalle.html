@@ -23,16 +23,28 @@
             </div>
             <div id="mensajeAlerta">
             </div>
-            <p id="nameDetalleFilm">Name</p>
-            <p id="sinopsisDetalleFilm">Sinopsis</p>
-            <p id="webOficialDetalleFilm">Web oficial</p>
-            <p id="originalTitleDetalleFilm">Original title</p>
-            <p id="movieGenreDetalleFilm">Movie genre</p>
-            <p id="ageRaitingDetalleFilm">Age raiting</p>
-            <p id="durationDetalleFilm">Duration</p>
-
+            <p style="width: 95%;" id="nameDetalleFilm">Name</p>
+            <p style="width: 95%;" id="sinopsisDetalleFilm">Sinopsis</p>
+            <p style="width: 95%;" id="webOficialDetalleFilm">Web oficial</p>
+            <p style="width: 95%;" id="originalTitleDetalleFilm">Original title</p>
+            <p style="width: 95%;" id="movieGenreDetalleFilm">Movie genre</p>
+            <p style="width: 95%;" id="ageRaitingDetalleFilm">Age raiting</p>
+            <p style="width: 95%;" id="durationDetalleFilm">Duration</p>
+            <img style="width: 95%;" id="imgDetalleFilm" src="" />
         </section>
-        <img id="imgDetalleFilm" src="" />
+        <section id="comentarios" class="detalle">
+            <div class="comentarios">
+                <p id="nameDetalleFilm">Comentarios</p>
+                <div id="comentariosList">
+
+                </div>
+            </div>
+            <form class="divComentar">
+                <label for="comentario">Comenta:</label>
+                <input type="text" id="comentario" name="comentario" placeholder="comentario">
+                <button id="publicarComentario">COMENTA</button>
+            </form>
+        </section>
     </main>
     <script type="module" src="detalleFilm.js"></script>
 </body>

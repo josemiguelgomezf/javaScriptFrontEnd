@@ -31,6 +31,9 @@ body h1{
     height: 60px;
 }
 
+p {
+    font-family: 'Outfit', sans-serif;
+}
 .backButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
@@ -56,9 +59,19 @@ label{
 
 input {
     font-family: 'Roboto', sans-serif;
-    width: 100%;
+    width: 95%;
+
 }
+
 #createTicketButton {
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    padding: 0.5rem;
+}
+
+#editTicketButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
     width: 150px;
@@ -74,6 +87,14 @@ input {
     padding: 0.5rem;
 }
 
+#deleteTicketButton{
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    padding: 0.5rem;
+}
+
 form div{
     padding: 0.5rem;
     width: 100%;
@@ -81,4 +102,28 @@ form div{
 
 #mensajeAlerta{
     width: 100%;
+}
+
+#deleteTicketButton{
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    padding: 0.5rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.deleteDiv{
+    padding-left: 8px;
+}
+input{
+    width: 100%;
+}
+.deleteDiv input{
+    width: 99.4%;
 }

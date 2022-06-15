@@ -41,7 +41,19 @@
 
                 <button id="createRoomButton">CREATE ROOM</button>
             </form>
-            <button onclick="myFunction()" id="seeRoomButton">SEE ALL ROOMS</button>
+            <div class="deleteDiv">
+                <label for="roomEdit">Room id to edit:</label>
+                <input type="text" name="roomEdit" id="roomEdit" placeholder="idRoom" required />
+            </div>
+            <button id="editRoomButton">EDIT</button>
+            
+    </section>
+    <div class="deleteDiv">
+        <label for="roomDelete">Room id to delete:</label>
+        <input type="text" name="roomDelete" id="roomDelete" placeholder="idRoom" required />
+    </div>
+    <button id="deleteRoomButton">DELETE</button>   </br>
+    <button onclick="myFunction()" id="seeRoomButton">SEE ALL ROOMS</button>
             <script>
                 function myFunction() {
                     var x = document.getElementById("allRooms");
@@ -52,15 +64,9 @@
                     }
                 }
             </script>
-    </section>
     <section id="allRooms">
         
     </section>
-    <div>
-        <label for="roomDelete">Room id to delete:</label>
-        <input type="text" name="roomDelete" id="roomDelete" placeholder="idRoom" required />
-    </div>
-    <button id="deleteRoomButton">DELETE</button>
     </main>
     <script type="module" src="addRoom.js"></script>
 </body>

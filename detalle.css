@@ -35,6 +35,13 @@ body h1{
     height: 20px;
 }
 
+#publicarComentario {
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 80px;
+    height: 20px;
+}
+
 .backButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
@@ -42,6 +49,9 @@ body h1{
     height: 20px;
 }
 
+label {
+    font-family: 'Outfit', sans-serif;
+}
 #nameDetalleFilm {
     font-size: 25px;
 }
@@ -56,6 +66,16 @@ p{
     width: 100%;
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+main section { 
+    width: 45%;
+}
+
 #imgDetalleFilm {
     height:400px;
+    max-width: 300px;
 }

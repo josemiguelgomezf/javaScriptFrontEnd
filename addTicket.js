@@ -44,7 +44,7 @@ const ticketsList = document.querySelector("#allTickets");
 for (var i=0; i<tickets.length; i++){
     const ticket = tickets[i];
     console.log(ticket);
-    ticketsList.innerHTML += "<div><p>"+ticket.id+"</p><p>"+ticket.room+"</p><p>"+ticket.film+"</p></div>";
+    ticketsList.innerHTML += "<div class=container><p>Id:"+ticket.id+"</p><p>Row:"+ticket.row+"</p><p>Column:"+ticket.column+"</p><p>"+ticket.room+"</p><p>"+ticket.film+"</p><p>"+ticket.date+"</p><p>"+ticket.hour+"</p></div>";
 }
 
 for (var i=0; i<rooms.length; i++){
@@ -69,5 +69,31 @@ const filmsList = document.querySelector("#films");
 for (var i=0; i<films.length; i++){
     const film = films[i];
     filmsList.options.add(new Option(film.name, film.name));
-}
+};
+
+const buttonEdit = document.querySelector("#editTicketButton");
+
+buttonEdit.addEventListener('click', async event => {
+    event.preventDefault();
+    const id = document.querySelector("#ticketEdit").value;
+    const rooms = document.querySelector("#rooms").value;
+    const rows = document.querySelector("#rows").value;
+    const columns = document.querySelector("#columns").value;
+    const film = document.querySelector("#films").value;
+    const date = document.querySelector("#dateInput").value;
+    const hour = document.querySelector("#hourInput").value;
+    
+    if (window.confirm("Do you really want to edit?")) {
+        try {
+            await PostsService.editTicket(id, rooms, rows, columns, film, date, hour);
+            window.location.assign("./");
+        }
+        catch (error) {
+            const notificationElement = document.querySelector(".notification");
+            const notificationController = new NotificationController(notificationElement);
+            notificationController.show(error);
+        }
+    }
+    
+});
 
