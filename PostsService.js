@@ -113,6 +113,31 @@ export default {
             throw new Error(datos.message);
         }
     },
+    async addReserva(rooms, rows, columns, film, date, hour) {
+        const data =
+        {
+            "rooms": rooms,
+            "rows": rows,
+            "columns": columns,
+            "film": film,
+            "date": date,
+            "hour": hour,
+        };
+        
+        const response = await fetch("http://localhost:8000/api/reserva/", {
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+        });
+
+        const datos = await response.json();
+        if (!response.ok) {
+            throw new Error(datos.message);
+        }
+    },
     async editRoom(idRoom, name, rows, columns) {
         const data =
         {
@@ -122,6 +147,32 @@ export default {
         };
         
         const response = await fetch("http://localhost:8000/api/room/"+idRoom, {
+            method: 'PUT', // or 'PUT'
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+        });
+
+        const datos = await response.json();
+        if (!response.ok) {
+            throw new Error(datos.message);
+        }
+    },
+    async editFilm(id, name, sinopsis, webOficial, originalTitle, ageRaiting, duration, movieGenre) {
+        const data =
+        {
+            "name": name,
+            "sinopsis": sinopsis,
+            "webOficial": webOficial,
+            "originalTitle": originalTitle,
+            "ageRaiting": ageRaiting,
+            "duration": duration,
+            "movieGenre": movieGenre
+        };
+        
+        const response = await fetch("http://localhost:8000/api/film/"+id, {
             method: 'PUT', // or 'PUT'
             body: JSON.stringify(data), // data can be `string` or {object}!
             headers: {

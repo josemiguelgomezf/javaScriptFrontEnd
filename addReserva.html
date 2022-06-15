@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./spinner.css" />
+    <link rel="stylesheet" href="./notification.css" />
+    <link rel="stylesheet" href="./addReserva.css" />
+    <link rel="stylesheet" href="./global.css" />
+    <title>Javapop - Add reserva</title>
+</head>
+<body>
+    <div class="header">
+        <img class="logotipo" src="./images/Javapop.png">
+        <h1>Javapop - Add reserva</h1>
+        <div>
+            <img class="signup" src="./images/back.png">
+            <button onclick="location.href = '/';" id="backAddFilm" class="backButton">BACK</button>
+        </div>
+    </div>
+    <main>
+        <section class="add">
+            <form action="" id="addForm">
+                <div class="notification">
+                </div>
+                <div id="mensajeAlerta">
+                </div>
+
+                <div style="width: 100%;">
+                    <label for="rooms">Choose a room:</label>
+                    <select name="rooms" id="rooms">
+                    </select>
+                </div>
+
+                <div style="width: 100%;">
+                    <label for="rows">Choose a row:</label>
+                    <input type="number" id="rows" name="rows" min="0" >
+                </div>
+                
+                <div style="width: 100%;">
+                    <label for="columns">Choose a column:</label>
+                    <input type="number" id="columns" name="columns" min="0">
+                </div>
+
+                <div style="width: 100%;">
+                    <label for="films">Choose a film:</label>
+                    <select name="films" id="films">
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="dateInput">Date</label>
+                    <input type="text" name="dateInput" id="dateInput" placeholder="date" required />
+                </div>
+
+                <div>
+                    <label for="hourInput">Hour</label>
+                    <input type="text" name="hourInput" id="hourInput" placeholder="hour" required />
+                </div>
+
+                <button id="createTicketButton">CREATE TICKET</button>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="addReserva.js"></script>
+</body>
+</html>
