@@ -14,7 +14,7 @@
     <div class="header">
         <img class="logotipo" src="./images/Javapop.png">
         <h1>Javapop - Add reserva</h1>
-        <div>
+        <div class="buttonBackDiv">
             <img class="signup" src="./images/back.png">
             <button onclick="location.href = '/';" id="backAddFilm" class="backButton">BACK</button>
         </div>
@@ -27,7 +27,7 @@
                 <div id="mensajeAlerta">
                 </div>
 
-                <div style="width: 100%;">
+                <div>
                     <label for="rooms">Choose a room:</label>
                     <select name="rooms" id="rooms">
                     </select>
@@ -37,17 +37,17 @@
 
                 </div>
 
-                <div style="width: 100%;">
+                <div>
                     <label for="rows">Choose a row:</label>
                     <input type="number" id="rows" name="rows" min="0" >
                 </div>
                 
-                <div style="width: 100%;">
+                <div>
                     <label for="columns">Choose a column:</label>
                     <input type="number" id="columns" name="columns" min="0">
                 </div>
 
-                <div style="width: 100%;">
+                <div>
                     <label for="films">Choose a film:</label>
                     <select name="films" id="films">
                     </select>
@@ -55,12 +55,12 @@
                 
                 <div>
                     <label for="dateInput">Date</label>
-                    <input type="text" name="dateInput" id="dateInput" placeholder="date" required />
+                    <input type="date" name="dateInput" id="dateInput" placeholder="date" required />
                 </div>
 
                 <div>
                     <label for="hourInput">Hour</label>
-                    <input type="text" name="hourInput" id="hourInput" placeholder="hour" required />
+                    <input type="time" name="hourInput" id="hourInput" placeholder="hour" required />
                 </div>
 
                 <button id="createTicketButton">CREATE TICKET</button>

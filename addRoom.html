@@ -44,16 +44,18 @@
             <div class="deleteDiv">
                 <label for="roomEdit">Room id to edit:</label>
                 <input type="text" name="roomEdit" id="roomEdit" placeholder="idRoom" required />
+                <button id="editRoomButton">EDIT</button>
             </div>
-            <button id="editRoomButton">EDIT</button>
+            
             
     </section>
     <div class="deleteDiv">
         <label for="roomDelete">Room id to delete:</label>
         <input type="text" name="roomDelete" id="roomDelete" placeholder="idRoom" required />
+        <button id="deleteRoomButton">DELETE</button>   </br>
     </div>
-    <button id="deleteRoomButton">DELETE</button>   </br>
-    <button onclick="myFunction()" id="seeRoomButton">SEE ALL ROOMS</button>
+    <div class="allRooms">
+        <button onclick="myFunction()" id="seeRoomButton">SEE ALL ROOMS</button>
             <script>
                 function myFunction() {
                     var x = document.getElementById("allRooms");
@@ -67,6 +69,7 @@
     <section id="allRooms">
         
     </section>
+    </div>
     </main>
     <script type="module" src="addRoom.js"></script>
 </body>

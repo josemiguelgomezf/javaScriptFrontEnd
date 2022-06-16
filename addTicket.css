@@ -4,13 +4,33 @@
 form{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
+.deleteDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.allTickets{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#allTickets{
+    width: 100%;
+}
+
 article{
-    width: 33%;
+    width: 50%;
 }
 
 .header{
@@ -54,19 +74,13 @@ p {
 
 label{
     font-family: 'Outfit', sans-serif;
-    text-align: center;
-}
-
-input {
-    font-family: 'Roboto', sans-serif;
-    width: 95%;
-
+    width: 50%;
 }
 
 #createTicketButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 150px;
+    width: 51%;
     height: 40px;
     padding: 0.5rem;
 }
@@ -74,7 +88,7 @@ input {
 #editTicketButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 150px;
+    width: 51%;
     height: 40px;
     padding: 0.5rem;
 }
@@ -82,22 +96,14 @@ input {
 #seeTicketButton{
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 150px;
-    height: 40px;
-    padding: 0.5rem;
-}
-
-#deleteTicketButton{
-    font-family: 'Outfit', sans-serif;
-    background-color: white;
-    width: 150px;
+    width: 51%;
     height: 40px;
     padding: 0.5rem;
 }
 
 form div{
     padding: 0.5rem;
-    width: 100%;
+    width: 51%;
 }
 
 #mensajeAlerta{
@@ -107,7 +113,7 @@ form div{
 #deleteTicketButton{
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 150px;
+    width: 51%;
     height: 40px;
     padding: 0.5rem;
 }
@@ -118,12 +124,18 @@ form div{
     justify-content: space-around;
 }
 
-.deleteDiv{
-    padding-left: 8px;
-}
 input{
-    width: 100%;
+    width: 70%;
+    font-family: 'Roboto', sans-serif;
 }
 .deleteDiv input{
-    width: 99.4%;
+    width: 50%;
+}
+
+div input{
+    width: 98%;
+}
+
+div select{
+    width: 100%;
 }

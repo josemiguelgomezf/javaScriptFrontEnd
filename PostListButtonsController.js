@@ -54,7 +54,7 @@ export default class ControlerButtons {
             });
         }
         else {
-            this.notificationController.show("You are not logged! You can not upload!", "info");
+            this.notificationController.show("You are not logged! You can not see details, comment or buy!", "info");
             this.addButtonElementTicket.style.display = 'none';
             document.querySelector(".ticket").style.display = 'none';
             

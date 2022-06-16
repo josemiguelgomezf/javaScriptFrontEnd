@@ -4,13 +4,29 @@
 form{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.editeDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.allRooms{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
 article{
-    width: 33%;
+    width: 50%;
 }
 
 .header{
@@ -31,6 +47,9 @@ body h1{
     height: 60px;
 }
 
+p {
+    font-family: 'Outfit', sans-serif;
+}
 .backButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
@@ -51,42 +70,68 @@ body h1{
 
 label{
     font-family: 'Outfit', sans-serif;
-    text-align: center;
+    width: 50%;
 }
 
-input {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-}
 #createFilmButton {
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 150px;
+    width: 51%;
+    height: 40px;
+    padding: 0.5rem;
+}
+
+#editFilmButton {
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 51%;
+    height: 40px;
+    padding: 0.5rem;
+}
+
+#seeFilmButton{
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
+    width: 51%;
     height: 40px;
     padding: 0.5rem;
 }
 
 form div{
     padding: 0.5rem;
-    width: 100%;
+    width: 51%;
 }
 
 #mensajeAlerta{
     width: 100%;
 }
 
-.editeDiv {
-    padding-left: 8px;
-}
-
-.editeDiv input{
-    width: 99.4%;
-}
-
-#editFilmButton {
+#deleteFilmButton{
     font-family: 'Outfit', sans-serif;
     background-color: white;
-    width: 150px;
+    width: 51%;
     height: 40px;
     padding: 0.5rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+input{
+    width: 70%;
+    font-family: 'Roboto', sans-serif;
+}
+.editeDiv input{
+    width: 50%;
+}
+
+div input{
+    width: 98%;
+}
+
+div select{
+    width: 100%;
 }
