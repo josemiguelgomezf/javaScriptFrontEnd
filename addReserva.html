@@ -63,7 +63,7 @@
                     <input type="time" name="hourInput" id="hourInput" placeholder="hour" required />
                 </div>
 
-                <button id="createTicketButton">CREATE TICKET</button>
+                <button id="createTicketButton">CREATE RESERVA</button>
                 <script>document.getElementById("createTicketButton").onclick = function(){
                     var i=Math.random() * (5000 - 755) + 123;
                     const rooms = document.querySelector("#rooms").value;
@@ -123,6 +123,25 @@
                 
                     };</script>
             </form>
+            <div class="allTickets">
+                <button onclick="myFunction()" id="seeTicketButton">SEE ALL RESERVAS</button>
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("allTickets");
+                        if (x.style.display === "none") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    }
+                </script>
+                <section id="allTickets">
+            
+                </section>
+            </div>
+            <div class="allTickets">
+                <button id="deleteAllReservas">DELETE ALL RESERVAS</button>
+            </div>
         </section>
     </main>
     <script type="module" src="addReserva.js"></script>

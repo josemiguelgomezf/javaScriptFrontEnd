@@ -74,3 +74,45 @@ buttonCreate.addEventListener('click', async event => {
     
 });
 
+const reservas = await PostsService.GetReservas();
+const ticketsList = document.querySelector("#allTickets");
+for (var i=0; i<reservas.length; i++){
+    const ticket = reservas[i];
+    ticketsList.innerHTML += "<div class=container><p>Id:"+ticket.id+"</p><p>Row:"+ticket.row+"</p><p>Column:"+ticket.column+"</p><p>"+ticket.room+"</p><p>"+ticket.film+"</p><p>"+ticket.date+"</p><p>"+ticket.hour+"</p></div>";
+}
+
+const deleteAllReservas = document.querySelector("#deleteAllReservas");
+
+deleteAllReservas.addEventListener('click', async event => {
+    event.preventDefault();
+    
+        try {
+            for(var i=0; i<reservas.length; i++){
+                await PostsService.deleteAllReservas(i+1);
+            }
+            location.reload();
+        }
+        catch (error) {
+            const notificationElement = document.querySelector(".notification");
+            const notificationController = new NotificationController(notificationElement);
+            notificationController.show(error);
+        }
+    
+});
+
+        var token = localStorage.getItem('token');
+        if (token) {
+            function parseJwt(token) {
+                var base64Url = token.split('.')[1]; var base64 = base64Url.replace('-', '+').replace('_', '/');
+                return JSON.parse(window.atob(base64));
+            };
+            const tokenDecodificado = parseJwt(token);
+            console.log(tokenDecodificado);
+            const nombreUsuario = tokenDecodificado.username;
+            if (nombreUsuario!="admin"){
+                document.querySelector("#seeTicketButton").style.display = 'none';
+                document.querySelector("#deleteAllReservas").style.display = 'none';
+                document.querySelector(".container").style.display = 'none';
+                
+            }
+        }
