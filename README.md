@@ -1,8 +1,8 @@
 # javaScriptFrontEnd
 
 <h1>Usuarios creados:</h1>
-- JoseMiguelGomez / 123456Ab
-- MiguelJoseFdez / 123456Ab 
+•	Josete / Jos12345
+•	admin / Admin123 
 *Para crear un usuario asegurarse que la contraseña cumple con todos los requisitos para que sea suficientemente fuerte.
 
 <h1>Documentación adjunta: </h1>
