@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="./notification.css" />
     <link rel="stylesheet" href="./addReserva.css" />
     <link rel="stylesheet" href="./global.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>Javapop - Add reserva</title>
 </head>
 <body>
@@ -29,6 +31,10 @@
                     <label for="rooms">Choose a room:</label>
                     <select name="rooms" id="rooms">
                     </select>
+                </div>
+
+                <div class="salaCine">
+
                 </div>
 
                 <div style="width: 100%;">
@@ -58,6 +64,18 @@
                 </div>
 
                 <button id="createTicketButton">CREATE TICKET</button>
+                <script>document.getElementById("createTicketButton").onclick = function(){Swal.fire({
+                    title: 'Submit your credit card',
+                    input: 'text',
+                    inputAttributes: {
+                      autocapitalize: 'off'
+                    },
+                    showCancelButton: true,
+                    confirmButtonText: 'Look up',
+                    showLoaderOnConfirm: true,
+                    preConfirm: (login) => {
+                    }
+                  })};</script>
             </form>
         </section>
     </main>

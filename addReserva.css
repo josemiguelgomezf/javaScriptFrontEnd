@@ -127,3 +127,9 @@ input{
 .deleteDiv input{
     width: 99.4%;
 }
+
+.salaCine{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

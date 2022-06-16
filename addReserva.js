@@ -1,7 +1,7 @@
 
 import NotificationController from "./NotificationController.js";
-
 import PostsService from "./PostsService.js";
+
 
 const tickets = await PostsService.GetTickets();
 const rooms = await PostsService.GetRooms();
@@ -14,16 +14,32 @@ for (var i=0; i<rooms.length; i++){
     roomsList.options.add(new Option(room.name, room.name));
 }
 
-var roomSelect = roomsList.value;
+
+
+
+roomsList.addEventListener("change", (evt) => {
+    // ACA obtenemos el option seleccionado
+    const salaCine = document.querySelector(".salaCine");
+    salaCine.innerHTML="";
+    let option = evt.currentTarget.selectedOptions[0];
+    
+var roomSelect = option;
 if(roomSelect !== ""){
     for (var i=0; i<rooms.length; i++){
         const room = rooms[i];
         if (room.name==roomsList.value){
             rowsMax.setAttribute("max", ""+room.rows);
             columnsMax.setAttribute("max", ""+room.columns);
+            for (var z=0; z<room.rows; z++){
+                for (var h=0; h<room.columns; h++){
+                    salaCine.innerHTML+="<p>"+z+"-"+h+"</p>";
+                }
+                salaCine.innerHTML+="<p style=width:100%; >";
+            }
         }
     }
 }
+  });
 
 const films = await PostsService.GetPosts();
 const filmsList = document.querySelector("#films");
@@ -45,6 +61,9 @@ buttonCreate.addEventListener('click', async event => {
     const hour = document.querySelector("#hourInput").value;
     
         try {
+            if (rooms===""||rows===""||columns===""||film===""||date===""||hour===""){
+                throw new Error('You must complete all info!')
+            }
             await PostsService.addReserva(rooms, rows, columns, film, date, hour);
             window.location.assign("./");
             function download(filename, text) {

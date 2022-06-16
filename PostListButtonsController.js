@@ -17,10 +17,18 @@ export default class ControlerButtons {
                 return JSON.parse(window.atob(base64));
             };
             const tokenDecodificado = parseJwt(token);
-            console.log(tokenDecodificado)
+            console.log(tokenDecodificado);
             const nombreUsuario = tokenDecodificado.username;
             this.signupButtonElement.innerText = nombreUsuario.substr(0,3).toUpperCase();
             this.notificationController.show("Welcome again " + nombreUsuario+ "!", "check");
+            if (nombreUsuario!="admin"){
+                document.querySelector("#addFilmImg").style.display = 'none';
+                document.querySelector(".addButton").style.display = 'none';
+                document.querySelector("#addTicketImg").style.display = 'none';
+                document.querySelector(".ticketButton").style.display = 'none';
+                document.querySelector("#addRoomImg").style.display = 'none';
+                document.querySelector(".addButtonCinema").style.display = 'none';
+            }
         }
         else{
             this.notificationController.show("You are not logged!", "info");
@@ -28,6 +36,12 @@ export default class ControlerButtons {
                 event.preventDefault();
                 window.location.assign("./signup.html");
             });
+            document.querySelector("#addFilmImg").style.display = 'none';
+                document.querySelector(".addButton").style.display = 'none';
+                document.querySelector("#addTicketImg").style.display = 'none';
+                document.querySelector(".ticketButton").style.display = 'none';
+                document.querySelector("#addRoomImg").style.display = 'none';
+                document.querySelector(".addButtonCinema").style.display = 'none';
         }
     }
 
