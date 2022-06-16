@@ -1,0 +1,310 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "$2b$10$htw41kW.afBnCE62r7maQ.Du4Bbg5DCOmjARQVmvZgzcIuGQPfaeO",
+      "id": 1
+    },
+    {
+      "username": "JoseMiguel",
+      "password": "$2b$10$htw41kW.afBnCE62r7maQ.UOaD51zrhgCj8P739lWzPLXozCtYzcK",
+      "id": 2
+    },
+    {
+      "username": "Josete",
+      "password": "$2b$10$qxo.Qi2LqIjWL4R4idLU8O8jq1Mzzi518aZF8yO1hhCLF6AZnTI/a",
+      "id": 3
+    }
+  ],
+  "film": [
+    {
+      "name": "John Carter",
+      "sinopsis": "Un tipo extraño que acaba en Marte con superpoderes.",
+      "imagen": "http://localhost:8000//file-1655367086441.jpg",
+      "webOficial": "johncarter.com",
+      "originalTitle": "John Carter's",
+      "movieGenre": "Accion",
+      "ageRaiting": "+18",
+      "duration": "120'",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:11:26.454Z",
+      "id": 1
+    },
+    {
+      "name": "Cars",
+      "sinopsis": "Un montón de coches geniales que corren mucho.",
+      "imagen": "http://localhost:8000//file-1655367133964.jpg",
+      "webOficial": "cars.net",
+      "originalTitle": "Coches",
+      "movieGenre": "Carreras",
+      "ageRaiting": "+3",
+      "duration": "134'",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:12:13.982Z",
+      "id": 2
+    },
+    {
+      "name": "Star Wars",
+      "sinopsis": "Otra película de la mejor saga de la historia.",
+      "imagen": "http://localhost:8000//file-1655367188732.jpg",
+      "webOficial": "georgelucas.es",
+      "originalTitle": "Guerra Galaxias VII",
+      "movieGenre": "Aventuras",
+      "ageRaiting": "+13",
+      "duration": "320'",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:13:08.750Z",
+      "id": 3
+    },
+    {
+      "name": "Tarzan",
+      "sinopsis": "Phill Colins es el mejor cantante del planeta.",
+      "imagen": "http://localhost:8000//file-1655367614021.jpg",
+      "webOficial": "tarzan.wix.com",
+      "originalTitle": "Tarzan",
+      "movieGenre": "Aventuras",
+      "ageRaiting": "+3",
+      "duration": "234'",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:20:14.031Z",
+      "id": 5
+    },
+    {
+      "name": "Wall-E",
+      "sinopsis": "El robot con el mejor corazón de la galaxia.",
+      "imagen": "http://localhost:8000//file-1655367684678.jpg",
+      "webOficial": "wall-e.guay",
+      "originalTitle": "Robot",
+      "movieGenre": "Aventuras",
+      "ageRaiting": "+13",
+      "duration": "320'",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:21:24.688Z",
+      "id": 6
+    },
+    {
+      "name": "Prueba",
+      "sinopsis": "Prueba de pelicula sin imagen a ver...",
+      "imagen": "./images/Javapop.png",
+      "webOficial": "prueba.es",
+      "originalTitle": "Test",
+      "movieGenre": "Test",
+      "ageRaiting": "+0",
+      "duration": "120'",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:22:38.571Z",
+      "id": 7
+    }
+  ],
+  "ticket": [
+    {
+      "room": "Sala1",
+      "row": "5",
+      "column": "6",
+      "film": "John Carter",
+      "date": "2022-06-16",
+      "hour": "16:30",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:30:08.138Z",
+      "id": 1
+    },
+    {
+      "room": "Sala2",
+      "row": "1",
+      "column": "2",
+      "film": "Wall-E",
+      "date": "2022-06-17",
+      "hour": "14:30",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:30:35.825Z",
+      "id": 2
+    },
+    {
+      "room": "Sala3",
+      "row": "",
+      "column": "",
+      "film": "Star Wars",
+      "date": "2022-06-24",
+      "hour": "20:45",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:30:54.458Z",
+      "id": 3
+    }
+  ],
+  "room": [
+    {
+      "name": "Sala1",
+      "rows": "5",
+      "columns": "7",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:22:58.123Z",
+      "id": 1
+    },
+    {
+      "name": "Sala2",
+      "rows": "12",
+      "columns": "10",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:23:11.570Z",
+      "id": 2
+    },
+    {
+      "name": "Sala3",
+      "rows": "5",
+      "columns": "6",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:23:18.346Z",
+      "id": 3
+    },
+    {
+      "name": "Sala4",
+      "rows": "14",
+      "columns": "14",
+      "userId": 1,
+      "updatedAt": "2022-06-16T08:23:24.482Z",
+      "id": 4
+    }
+  ],
+  "reserva": [
+    {
+      "rooms": "Sala34",
+      "rows": "12",
+      "columns": "12",
+      "film": "Cars",
+      "date": "12/12/2022",
+      "hour": "17:00",
+      "userId": 1,
+      "updatedAt": "2022-06-15T17:03:48.656Z",
+      "id": 1
+    },
+    {
+      "rooms": "Sala34",
+      "rows": "213",
+      "columns": "123",
+      "film": "Cars",
+      "date": "213",
+      "hour": "213",
+      "userId": 1,
+      "updatedAt": "2022-06-15T17:06:29.003Z",
+      "id": 2
+    },
+    {
+      "rooms": "Sala1",
+      "rows": "32",
+      "columns": "",
+      "film": "Cars",
+      "date": "",
+      "hour": "",
+      "userId": 1,
+      "updatedAt": "2022-06-16T00:05:48.668Z",
+      "id": 3
+    },
+    {
+      "rooms": "Sala1",
+      "rows": "",
+      "columns": "",
+      "film": "Cars",
+      "date": "",
+      "hour": "",
+      "userId": 1,
+      "updatedAt": "2022-06-16T00:08:15.381Z",
+      "id": 4
+    },
+    {
+      "rooms": "Sala1",
+      "rows": "0",
+      "columns": "2",
+      "film": "123",
+      "date": "12/12/2022",
+      "hour": "17:00",
+      "userId": 3,
+      "updatedAt": "2022-06-16T00:25:51.338Z",
+      "id": 5
+    },
+    {
+      "rooms": "Sala1",
+      "rows": "12",
+      "columns": "12",
+      "film": "123",
+      "date": "12",
+      "hour": "12",
+      "userId": 3,
+      "updatedAt": "2022-06-16T00:26:34.219Z",
+      "id": 6
+    },
+    {
+      "rooms": "432",
+      "rows": "1",
+      "columns": "5",
+      "film": "123",
+      "date": "12",
+      "hour": "12",
+      "userId": 3,
+      "updatedAt": "2022-06-16T00:27:28.475Z",
+      "id": 7
+    }
+  ],
+  "comentarios": [
+    {
+      "comentario": "jajajja malisima",
+      "userId": 1,
+      "updatedAt": "2022-06-15T15:22:20.482Z",
+      "id": 1
+    },
+    {
+      "comentario": "123",
+      "userId": 1,
+      "updatedAt": "2022-06-15T15:29:10.625Z",
+      "id": 2
+    },
+    {
+      "comentario": "cars es buena",
+      "pelicula": "Cars",
+      "userId": 1,
+      "updatedAt": "2022-06-15T15:30:48.410Z",
+      "id": 3
+    },
+    {
+      "comentario": "avatar es mala mala",
+      "pelicula": "Avatar",
+      "userId": 1,
+      "updatedAt": "2022-06-15T15:32:07.402Z",
+      "id": 4
+    },
+    {
+      "comentario": "SEGURO?",
+      "pelicula": "Cars",
+      "userId": 1,
+      "updatedAt": "2022-06-15T15:48:25.440Z",
+      "id": 5
+    },
+    {
+      "comentario": "sisis hazme caso",
+      "pelicula": "Cars",
+      "userId": 1,
+      "updatedAt": "2022-06-15T15:48:34.971Z",
+      "id": 6
+    },
+    {
+      "comentario": "xadsas",
+      "pelicula": "123",
+      "userId": 3,
+      "updatedAt": "2022-06-15T23:08:05.029Z",
+      "id": 7
+    },
+    {
+      "comentario": "AHORA SI",
+      "pelicula": "123",
+      "userId": 3,
+      "updatedAt": "2022-06-16T00:25:21.910Z",
+      "id": 8
+    },
+    {
+      "comentario": "Es una de mis peliculas favoritas...",
+      "pelicula": "John Carter",
+      "userId": 3,
+      "updatedAt": "2022-06-16T08:33:08.218Z",
+      "id": 9
+    }
+  ]
+}
