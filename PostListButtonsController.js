@@ -42,6 +42,8 @@ export default class ControlerButtons {
                 document.querySelector(".ticketButton").style.display = 'none';
                 document.querySelector("#addRoomImg").style.display = 'none';
                 document.querySelector(".addButtonCinema").style.display = 'none';
+                document.querySelector(".add").style.display = 'none';
+                document.querySelector(".addButtonBuy").style.display = 'none';
         }
     }
 

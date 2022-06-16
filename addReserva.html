@@ -64,18 +64,64 @@
                 </div>
 
                 <button id="createTicketButton">CREATE TICKET</button>
-                <script>document.getElementById("createTicketButton").onclick = function(){Swal.fire({
-                    title: 'Submit your credit card',
+                <script>document.getElementById("createTicketButton").onclick = function(){
+                    var i=Math.random() * (5000 - 755) + 123;
+                    const rooms = document.querySelector("#rooms").value;
+                    const rows = document.querySelector("#rows").value;
+                    const columns = document.querySelector("#columns").value;
+                    const film = document.querySelector("#films").value;
+                    const date = document.querySelector("#dateInput").value;
+                    const hour = document.querySelector("#hourInput").value;
+                    var creditCard = "";
+                    
+
+                    function download(filename, text) {
+                    var element = document.createElement('a');
+                    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+                    element.setAttribute('download', filename);
+              
+                    element.style.display = 'none';
+                    document.body.appendChild(element);
+              
+                    element.click();
+              
+                    document.body.removeChild(element);
+                }
+                
+                    Swal.fire({
+                    title: 'Are you sure?',
                     input: 'text',
-                    inputAttributes: {
-                      autocapitalize: 'off'
-                    },
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
                     showCancelButton: true,
-                    confirmButtonText: 'Look up',
-                    showLoaderOnConfirm: true,
-                    preConfirm: (login) => {
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, pay!'
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                        const p = document.querySelector(".error");
+                        console.log(result.value);
+                        if(p || result.value==""){
+                            Swal.fire(
+                        ''+i,
+                        'You must introduce all dates of reserva!',
+                        'error'
+                      );} else{
+                            Swal.fire(
+                        ''+i,
+                        'You must show that number at the entry!',
+                        'success'
+                      );
+                      // Start file download.
+                download(i+".txt",rooms+"/"+rows+"/"+columns+"/"+film+"/"+date+"/"+hour);
+                        }
+                      
+              
                     }
-                  })};</script>
+                  });
+                    
+                
+                    };</script>
             </form>
         </section>
     </main>

@@ -61,3 +61,10 @@ for (var i=0; i<comentarios.length; i++){
         commentsList.innerHTML += "<div class=containerComment><p>"+comment.comentario+"</p><p>By:"+comment.userId+"</p><p>At:"+comment.updatedAt+"</p></div>";
     }
 }
+const comentariosSection = document.querySelector("#comentarios");
+var token = localStorage.getItem('token');
+if (token) {
+}
+else {
+    comentariosSection.style.display = 'none';
+}

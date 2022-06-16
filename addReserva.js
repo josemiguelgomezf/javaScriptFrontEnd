@@ -65,21 +65,6 @@ buttonCreate.addEventListener('click', async event => {
                 throw new Error('You must complete all info!')
             }
             await PostsService.addReserva(rooms, rows, columns, film, date, hour);
-            function download(filename, text) {
-                var element = document.createElement('a');
-                element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-                element.setAttribute('download', filename);
-              
-                element.style.display = 'none';
-                document.body.appendChild(element);
-              
-                element.click();
-              
-                document.body.removeChild(element);
-              }
-              
-              // Start file download.
-              download("reserva.txt",rooms+"/"+rows+"/"+columns+"/"+film+"/"+date+"/"+hour);
         }
         catch (error) {
             const notificationElement = document.querySelector(".notification");
